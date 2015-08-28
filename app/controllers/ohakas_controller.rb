@@ -1,6 +1,6 @@
 class OhakasController < ApplicationController
   def index
-    @ohakas = Ohaka.all
+    @ohakas = Ohaka.search(params[:search])
   end
 
   def new
@@ -39,6 +39,9 @@ class OhakasController < ApplicationController
     redirect_to ohakas_path
   end
 
+  def search
+
+  end
   private
   def ohaka_params
     params.require(:ohaka).permit(:name,:image,:image_cache, :remove_image,:location,:activity,:orin_num,:senko_num)
