@@ -1,0 +1,17 @@
+<p>
+  <%= @ohaka.name %>
+</p>
+
+<p>
+  <% if @ohaka.image? %>
+　　<%= image_tag @ohaka.image.thumb.url %>
+　<% else %>
+　　<%= image_tag 'noimage.gif' %>
+　<% end %>
+</p>
+
+<p>
+  <%= @ohaka.location %>
+</p>
+
+<%= link_to 'ホーム画面へ', ohakas_path %>

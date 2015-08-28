@@ -7,4 +7,15 @@
       <%= f.text_field :name %>
       <%= f.submit '検索' %>
   <% end %>
+  <div>
+      <% @ohakas.each do |ohaka| %>
+      <p>
+        <%= ohaka.name %><br>
+        <%= image_tag ohaka.image.thumb.url %>
+        <%= link_to '編集', edit_ohaka_path(ohaka) %>
+        <%= link_to '削除', ohaka_path(ohaka),
+                    method: :delete, data: { confirm: '消しますか？' } %>
+      </p>
+      <% end %>
+  </div>
 </p>
