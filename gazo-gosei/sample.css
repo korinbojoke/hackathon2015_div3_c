@@ -1,0 +1,15 @@
+h2 {
+  color: gray;
+}
+p .parent{
+  position: relative;
+}
+#text {
+  -webkit-writing-mode:vertical-rl;
+      direction:ltr;
+  position: absolute;
+  left: 330px;
+  top:120px;
+  z-index: 1;
+  font-size: 8ex;
+}
