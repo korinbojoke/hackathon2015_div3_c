@@ -1,0 +1,39 @@
+<h1>お墓内容編集</h1>
+
+<%= @ohaka.name %>
+
+<%= form_for :ohaka, url: ohaka_path(@ohaka), method: :patch do |f| %>
+  <% if @ohaka.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@ohaka.errors.count, "error") %> prohibited
+      this ohaka from being saved:</h2>
+    <ul>
+    <% @ohaka.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+   <% if @ohaka.image? %>
+     <div class="thumbnail">
+       <%= image_tag @ohaka.image.url %>
+     </div>
+   <% end %><br>
+   <%= f.label :image %><br>
+   <%= f.file_field :image %>
+   <%= f.hidden_field :image_cache %>
+ </div>
+
+  <p>
+    <%= f.label :location, "活動していたところ" %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.submit "編集" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', ohakas_path %>
