@@ -1,10 +1,31 @@
-<h1>お墓トップです</h1>
+<style type=text/css>
+<!--
+.iei {
+    height: 0%;
+    padding-top: 100%;
+    background: url('assets/black_iei.jpg') 0 0 no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.searchbar {
+    /*position: relative;*/
+    /*width: 10px;*/
+    margin: 0 auto;
+}
+
+-->
+</style>
+
+
+<div class="iei">
+</div>
+<h2>あの人はいま</h2>
+<div class="searchbar">
+<%= form_for :ohaka do |f| %>
+    <%= f.label :name, "名前" %>:
+    <%= f.text_field :name %>
+    <%= f.submit '検索' %>
+<% end %>
+</div>
 <%= link_to 'お墓新規作成', new_ohaka_path %>
-<p>
-  <h2>お墓検索</h2>
-  <%= form_for :ohaka do |f| %>
-      <%= f.label :name, "名前" %><br>
-      <%= f.text_field :name %>
-      <%= f.submit '検索' %>
-  <% end %>
-</p>
