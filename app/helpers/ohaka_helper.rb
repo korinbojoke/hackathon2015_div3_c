@@ -1,0 +1,2 @@
+module OhakaHelper
+end
