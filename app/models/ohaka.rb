@@ -1,4 +1,5 @@
 class Ohaka < ActiveRecord::Base
+  has_many :comments
   validates :name, presence: true, uniqueness: true
   # 画像の追加
   mount_uploader :image, ImageUploader
