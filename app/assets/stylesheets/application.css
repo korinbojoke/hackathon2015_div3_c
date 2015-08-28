@@ -16,7 +16,11 @@
  *= require sandstone/bootswatch
  */
 
-#background-ohaka{
-  background-image: url('/assets/ohaka.jpg');
-  background-size: cover;
+#ohaka{
+    width: 100%;
+    height: 480px;
+    background: url('/assets/ohaka.jpg');
+    background-size: cover;
+    margin: 0 auto;
+    position: relative;
 }
