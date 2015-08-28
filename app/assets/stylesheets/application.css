@@ -15,3 +15,8 @@
  *= require sandstone/loader
  *= require sandstone/bootswatch
  */
+
+#background-ohaka{
+  background-image: url('/assets/ohaka.jpg');
+  background-size: cover;
+}
