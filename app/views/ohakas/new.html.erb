@@ -1,0 +1,22 @@
+<h2>新規お墓作成</h2>
+<%= form_for :ohaka do |f| %>
+  <p>
+    <%= f.label :name, "名前" %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :samunail, "サムネイル" %><br>
+    <%= f.text_field :samunail %>
+  </p>
+
+  <p>
+    <%= f.label :location, "活動していたところ" %><br>
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <%= f.submit "作成"%>
+  </p>
+<% end %>
+<%= link_to 'ホーム画面へ', ohakas_path %>

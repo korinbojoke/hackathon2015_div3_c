@@ -1,0 +1,10 @@
+<h1>お墓トップです</h1>
+<%= link_to 'お墓新規作成', new_ohaka_path %>
+<p>
+  <h2>お墓検索</h2>
+  <%= form_for :ohaka do |f| %>
+      <%= f.label :name, "名前" %><br>
+      <%= f.text_field :name %>
+      <%= f.submit '検索' %>
+  <% end %>
+</p>
