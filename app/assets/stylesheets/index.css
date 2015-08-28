@@ -1,0 +1,17 @@
+.iei {
+
+    background: url('assets/iei.png') 0 0 no-repeat;
+    background-size: contain;
+    background-position: center top;
+    position: relative;
+}
+
+.searchbar {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.results {
+    visibility: hidden;
+}

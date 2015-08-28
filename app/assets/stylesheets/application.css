@@ -24,3 +24,23 @@
     margin: 0 auto;
     position: relative;
 }
+
+#iei {
+
+    background: url('iei.png') 0 0 no-repeat;
+    background-size: contain;
+    background-position: center top;
+    position: relative;
+}
+
+.diedmans{
+  padding-top:60%;
+  padding-bottom:20%;
+  width: 60%;
+  margin-top: 50%;
+  margin-bottom: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
