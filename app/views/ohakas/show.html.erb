@@ -1,16 +1,19 @@
 
-<div id="ohaka"></div>
+<div id="ohaka">
   <div id="ohaka-name">
     <%= @ohaka.name %>
   </div>
-  
-  <p>
-  <% if @ohaka.image? %>
-  　　<%= image_tag @ohaka.image.thumb.url %>
-  　<% else %>
-  　　<%= image_tag 'noimage.jpg' %>
-  　<% end %>
-  </p>
+  <div id="ohaka-thumbnail">
+    <% if @ohaka.image? %>
+    　　<%= image_tag @ohaka.image.thumb.url %>
+    　<% else %>
+    　　<%= image_tag 'noimage.jpg' %>
+    　<% end %>
+  </div>
+</div>
+
+
+
   
   <p>
   <%= @ohaka.location %>
