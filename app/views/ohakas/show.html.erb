@@ -3,20 +3,23 @@
   <div id="ohaka-name">
     <%= @ohaka.name %>
   </div>
-  <div id="ohaka-thumbnail">
-    <% if @ohaka.image? %>
-    　　<%= image_tag @ohaka.image.thumb.url %>
-    　<% else %>
-    　　<%= image_tag 'noimage.jpg' %>
-    　<% end %>
+  <div class="center">
+    <%= image_tag "iei.png", :id=>"iei_back"  %>
+    <div id="ohaka-thumbnail">
+      <% if @ohaka.image? %>
+      　　<%= image_tag @ohaka.image.thumb.url, :class=>"thumb_img"  %>
+      　<% else %>
+      　　<%= image_tag 'noimage.jpg', :class=>"thumb_img" %>
+      　<% end %>
+    </div>
   </div>
 </div>
 
 
 
-  
+
   <p>
   <%= @ohaka.location %>
   </p>
-  
-  <%= link_to 'ホーム画面へ', ohakas_path %>
+
+  <%= link_to 'ホーム画面へ', ohakas_path,:id => "show_link" %>
