@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :ohakas
+  match 'ohakas/search',  to: 'ohakas#search', via: 'get'
   root 'ohakas#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
