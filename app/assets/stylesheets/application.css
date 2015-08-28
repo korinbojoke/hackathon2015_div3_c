@@ -28,11 +28,25 @@
 #ohaka-name{
   -webkit-writing-mode:vertical-rl;
   direction:ltr;
-  position: absolute;
-  top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-  margin:0 auto;
-  font-size: 8ex;
+  position: relative;
+  padding-top: 10%;
+  margin: 0 auto 0 auto;
+  font-size: 3em;
+}
+@media screen and (min-width:320px){
+  #ohaka-name{font-size: 2.5em;}
+}
+@media screen and (min-width:375px){
+  #ohaka-name{font-size: 3em;}
+}
+@media screen and (min-width:415px){
+  #ohaka-name{font-size: 3.5em;}
+}
+
+#ohaka-thumbnail{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 auto;
+
 }
