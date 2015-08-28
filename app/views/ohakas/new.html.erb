@@ -1,5 +1,5 @@
 <h2>新規お墓作成</h2>
-<%= form_for :ohaka, url: ohakas_path do |f| %>
+<%= form_for :ohaka, url: ohakas_path, :html => { :'data-ajax' => false } do |f| %>
   <p>
     <%= f.label :name, "名前" %><br>
     <%= f.text_field :name %>
