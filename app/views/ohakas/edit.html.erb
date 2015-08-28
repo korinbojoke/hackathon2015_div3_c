@@ -2,7 +2,7 @@
 
 <%= @ohaka.name %>
 
-<%= form_for :ohaka, url: ohaka_path(@ohaka), method: :patch do |f| %>
+<%= form_for :ohaka, url: ohaka_path(@ohaka),:html => { :'data-ajax' => false }, method: :patch do |f| %>
   <% if @ohaka.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@ohaka.errors.count, "error") %> prohibited
@@ -16,14 +16,15 @@
   <% end %>
 
   <div class="field">
-   <% if @ohaka.image? %>
      <div class="thumbnail">
-       <%= image_tag @ohaka.image.url %>
+       <% if @ohaka.image? %>
+        <%= image_tag @ohaka.image.thumb.url %>
+        <% else %>
+     　　<%= image_tag 'noimage.jpg' %>
+     　<% end %>
      </div>
-   <% end %><br>
    <%= f.label :image %><br>
    <%= f.file_field :image %>
-   <%= f.hidden_field :image_cache %>
  </div>
 
   <p>
@@ -36,4 +37,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', ohakas_path %>
+<%= link_to 'ホーム画面へ', ohakas_path %>

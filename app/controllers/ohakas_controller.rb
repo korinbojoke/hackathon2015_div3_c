@@ -8,8 +8,11 @@ class OhakasController < ApplicationController
 
   def create
     @ohaka = Ohaka.new(ohaka_params)
-    @ohaka.save
-    redirect_to @ohaka
+    if @ohaka.save
+      redirect_to @ohaka
+    else
+      render 'new'
+    end
   end
 
   def edit
