@@ -4,9 +4,9 @@
     <%= @ohaka.name %>
   </div>
   <div class="center">
-    <a onClick="sound();"><%= image_tag "orin.jpg", :id=>"orin-button"  %></a>
+    <a onClick="sound();"><%= image_tag "orin.png", :id=>"orin-button"  %></a>
     <%= image_tag "iei.png", :id=>"iei_back"  %>
-    <%= image_tag "senkou.jpg", :id=>"senkou-button"  %>
+    <%= image_tag "senkou.png", :id=>"senkou-button"  %>
     <a href="<%= edit_ohaka_path(@ohaka)%>">
     <div id="ohaka-thumbnail">
       <% if @ohaka.image? %>
