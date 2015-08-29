@@ -1,14 +1,15 @@
 <div id="iei">
-<%= link_to 'お墓新規作成', new_ohaka_path %>
+<%= link_to 'お墓をたてる', new_ohaka_path %>
 <p>
   <div class="diedmans">
   <p>
     最も悔やまれた人
-    <%= @most_name %>
+    <h2><%= image_tag @most_name.image.thumb.url %><%= @most_name.name %>　<%= @most_name.senko_num %>参り</h2>
   </p>
+  <br>
   <p>
     最近いなくなった人
-    <%= @recent_name %>
+    <h2><%= image_tag @recent_name.image.thumb.url %><%= @recent_name.name %></h2>
   </p>
 
   </div>

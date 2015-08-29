@@ -1,11 +1,11 @@
 class OhakasController < ApplicationController
   def index
     @ohakas = Ohaka.search(params[:search])
-    @recent_name = Ohaka.order(:created_at).last.name
+    @recent_name = Ohaka.order(:created_at).last
     if @recent_name == nil
       @recent_name = "いません"
     end
-    @most_name = Ohaka.order(:senko_num).last.name
+    @most_name = Ohaka.order(:senko_num).last
     if @most_name == nil
       @most_name = "いません"
     end
