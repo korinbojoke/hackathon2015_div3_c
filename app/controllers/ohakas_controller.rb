@@ -30,11 +30,9 @@ class OhakasController < ApplicationController
   def show
     @ohaka = Ohaka.find(params[:id])
     if "countup" == params[:type]
-      logger.debug "before: #{@ohaka.senko_num}"
       # @ohaka = Ohaka.find(params[:id])
       @ohaka.senko_num += 1
       @ohaka.save!
-      logger.debug "after: #{@ohaka.senko_num}"
     end
 
     respond_to do |format|
