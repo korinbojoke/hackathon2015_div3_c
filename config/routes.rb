@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :ohakas
+  resources :ohakas do
+    resources :comments
+  end
   match 'ohakas/search',  to: 'ohakas#search', via: 'get'
   root 'ohakas#index'
 

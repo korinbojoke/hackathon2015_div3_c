@@ -44,6 +44,34 @@
                                                                    repeat: 1
                                                                    });
                                     });
-                 
+
                  });
 </script>
+
+<h2>コメント一覧</h2>
+<% @ohaka.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>新規コメント</h2>
+<%= form_for([@ohaka, @ohaka.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
