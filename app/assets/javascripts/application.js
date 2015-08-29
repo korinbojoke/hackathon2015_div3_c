@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require sandstone/loader
 //= require sandstone/bootswatch
+//= require jquery.auderoSmokeEffect
+//= require sound
