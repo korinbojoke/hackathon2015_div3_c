@@ -56,14 +56,15 @@
     background-size: contain;
     background-position: center top;
     position: relative;
+    top:-200px;
 }
 
 .diedmans{
-  padding-top:20%;
+  padding-top:55%;
 padding-bottom:35%;
 width: 60%;
 margin-top: 30%;
-margin-bottom: 40%;
+/* margin-bottom: 40%; */
 margin-left: auto;
 margin-right: auto;
 }
@@ -82,7 +83,12 @@ a#show_link {
  bottom: -26%;
 }
 
-
+#linktag {
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
 
 #orin-button {
   position: relative;
