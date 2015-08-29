@@ -1,6 +1,6 @@
-<%= javascript_include_tag 'swipe-page' %>
+
 <div id="ohaka">
- <div id="ohaka-name">
+  <div id="ohaka-name">
     <%= @ohaka.name %>
   </div>
   <div class="center">
@@ -8,15 +8,11 @@
     <%= image_tag "iei.png", :id=>"iei_back"  %>
     <%= image_tag "senkou.jpg", :id=>"senkou-button"  %>
     <div id="ohaka-thumbnail">
-    <a href="<%= edit_ohaka_path(@ohaka)%>">
-    <% if @ohaka.image? %>
-          
-      　　<%= image_tag @ohaka.image.thumb.url, :class=>"thumb_img" %>
-          
+      <% if @ohaka.image? %>
+      　　<%= image_tag @ohaka.image.thumb.url, :class=>"thumb_img"  %>
       　<% else %>
       　　<%= image_tag 'noimage.jpg', :class=>"thumb_img" %>
       　<% end %>
-      </a>
     </div>
   </div>
 </div>
