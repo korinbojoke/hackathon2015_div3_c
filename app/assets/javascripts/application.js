@@ -16,4 +16,5 @@
 //= require sandstone/loader
 //= require sandstone/bootswatch
 //= require jquery.auderoSmokeEffect
+//= require jquery.auderoSmokeEffect.min
 //= require sound

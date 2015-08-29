@@ -3,8 +3,8 @@
   <div id="ohaka-name">
     <%= @ohaka.name %>
   </div>
-    <div class="center">
-    <%= image_tag "orin.jpg", :id=>"orin-button"  %>
+  <div class="center">
+    <a onClick="sound();"><%= image_tag "orin.jpg", :id=>"orin-button"  %></a>
     <%= image_tag "iei.png", :id=>"iei_back"  %>
     <%= image_tag "senkou.jpg", :id=>"senkou-button"  %>
     <div id="ohaka-thumbnail">
@@ -20,8 +20,30 @@
 
 
 
-  <p>
-  <%= @ohaka.location %>
-  </p>
 
-  <%= link_to 'ホーム画面へ', ohakas_path,:id => "show_link" %>
+<p>
+<%= @ohaka.location %>
+</p>
+
+<%= link_to 'ホーム画面へ', ohakas_path,:id => "show_link" %>
+
+<audio id="sound-file" preload="auto">
+  <source src="/orin.mp3" type="audio/mp3">
+  <source src="/orin.wav" type="audio/wav">
+</audio>
+
+<script>
+  $(window).load(function () {
+                 $("#senkou-button").click(function() {
+                                    $("#senkou-button").auderoSmokeEffect({
+                                                                   imagePath: "/assets/smoke.png",
+                                                                   width: 40,
+                                                                   height: 40,
+                                                                   posX: 40,
+                                                                   posY: 10,
+                                                                   repeat: 1
+                                                                   });
+                                    });
+                 
+                 });
+</script>
