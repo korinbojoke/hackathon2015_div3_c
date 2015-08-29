@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   resources :ohakas do
     resources :comments
+    get :count, on: :collection
   end
   match 'ohakas/search',  to: 'ohakas#search', via: 'get'
   root 'ohakas#index'
+  # match 'ohakas/count',  to: 'ohakas#count', via: 'get'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
