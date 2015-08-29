@@ -2,23 +2,30 @@
 <%= link_to 'お墓新規作成', new_ohaka_path %>
 <p>
   <div class="diedmans">
+  <p>
+    最も悔やまれた人
+  </p>
+  <p>
+    最近いなくなった人
+  </p>
+
+  </div>
   <%= form_tag ohakas_path, :method=> 'get', :html => { :'data-ajax' => false } do %>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "探す", :name => nil %>
+    <%= submit_tag "お墓を探す", :name => nil %>
   <% end %>
-  
       <% @ohakas.each do |ohaka| %>
       <p>
-        <%= ohaka.name %><br>
+
         <% if ohaka.image? %>
       　　 <%= link_to image_tag(ohaka.image.thumb.url),ohaka_path(ohaka) %>
       　<% else %>
       　　<%= link_to image_tag( 'noimage.jpg') ,ohaka_path(ohaka)%>
       　<% end %>
+          <%= ohaka.name %>
         <%= link_to '編集', edit_ohaka_path(ohaka) %>
         <%= link_to '削除', ohaka_path(ohaka),
                     method: :delete, data: { confirm: '消しますか？' } %>
       </p>
       <% end %>
 </p>
-</div>
