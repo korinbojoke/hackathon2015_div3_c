@@ -37,9 +37,9 @@
                  $("#senkou-button").click(function() {
                                     $("#senkou-button").auderoSmokeEffect({
                                                                    imagePath: "/assets/smoke.png",
-                                                                   width: 40,
-                                                                   height: 40,
-                                                                   posX: 40,
+                                                                   width: 100,
+                                                                   height: 100,
+                                                                   posX: 80,
                                                                    posY: 10,
                                                                    repeat: 1
                                                                    });
@@ -51,14 +51,15 @@
 <h2>コメント一覧</h2>
 <% @ohaka.comments.each do |comment| %>
   <p>
-    <strong>Commenter:</strong>
+    <strong>名前:</strong>
     <%= comment.commenter %>
   </p>
 
   <p>
-    <strong>Comment:</strong>
+    <strong>コメント:</strong>
     <%= comment.body %>
   </p>
+  <HR noshade>
 <% end %>
 
 <h2>新規コメント</h2>
