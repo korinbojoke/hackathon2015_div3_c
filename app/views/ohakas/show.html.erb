@@ -7,10 +7,12 @@
     <a onClick="sound();"><%= image_tag "orin.png", :id=>"orin-button"  %></a>
     <%= image_tag "iei.png", :id=>"iei_back"  %>
 
+
     <%= image_tag "senkou.png", :id=>"senkou-button", :onclick=>"countup();" %>
 
     <div class="senko-count">
     </div>
+
 
     <div id="ohaka-thumbnail">
         <a href="<%= edit_ohaka_path(@ohaka)%>">
