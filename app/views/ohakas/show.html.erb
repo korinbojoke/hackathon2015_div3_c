@@ -8,8 +8,8 @@
     <%= image_tag "iei.png", :id=>"iei_back"  %>
     <%= image_tag "senkou.jpg", :id=>"senkou-button"  %>
     <div id="ohaka-thumbnail">
-    <a href="http://google.com/" data-ajax="false" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">
-      <% if @ohaka.image? %>
+    <a href="<%= edit_ohaka_path(@ohaka)%>">
+    <% if @ohaka.image? %>
           
       　　<%= image_tag @ohaka.image.thumb.url, :class=>"thumb_img" %>
           
