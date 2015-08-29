@@ -11,6 +11,7 @@
 
     <div class="senko-count">
     </div>
+
     <div id="ohaka-thumbnail">
         <a href="<%= edit_ohaka_path(@ohaka)%>">
       <% if @ohaka.image? %>
@@ -26,6 +27,7 @@
 
 
 <script type="text/javascript">
+<<<<<<< HEAD
 
 function countup(){
   url = '/ohakas/'+<%= @ohaka.id %>+'?type=countup';
@@ -33,6 +35,15 @@ function countup(){
   $.get(url);
 }
 
+=======
+
+function countup(){
+  url = '/ohakas/'+<%= @ohaka.id %>+'?type=countup';
+  console.log(url);
+  $.get(url);
+}
+
+>>>>>>> most name success
 </script>
 
 
