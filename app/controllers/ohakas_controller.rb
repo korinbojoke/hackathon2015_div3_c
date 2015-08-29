@@ -1,6 +1,7 @@
 class OhakasController < ApplicationController
   def index
     @ohakas = Ohaka.search(params[:search])
+    @recent_name = Ohaka.order(:created_at).last.name
   end
 
   def new
