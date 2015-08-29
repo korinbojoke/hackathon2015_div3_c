@@ -3,8 +3,10 @@
   <div id="ohaka-name">
     <%= @ohaka.name %>
   </div>
-  <div class="center">
+    <div class="center">
+    <%= image_tag "orin.jpg", :id=>"orin-button"  %>
     <%= image_tag "iei.png", :id=>"iei_back"  %>
+    <%= image_tag "senkou.jpg", :id=>"senkou-button"  %>
     <div id="ohaka-thumbnail">
       <% if @ohaka.image? %>
       　　<%= image_tag @ohaka.image.thumb.url, :class=>"thumb_img"  %>

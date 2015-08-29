@@ -81,3 +81,17 @@ a#show_link {
  position: relative;
  bottom: -26%;
 }
+
+
+
+#orin-button {
+  max-width: 170px;
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+
+#senkou-button {
+  max-width: 170px;
+  height: auto;
+  margin: 0 auto 0 auto;
+}
