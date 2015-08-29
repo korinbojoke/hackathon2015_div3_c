@@ -36,5 +36,6 @@
     <%= f.submit "編集" %>
   </p>
 <% end %>
-
+<%= link_to '削除', ohaka_path(@ohaka),method: :delete, data: { confirm: '消しますか？' } %>
+<br>
 <%= link_to 'ホーム画面へ', ohakas_path %>
